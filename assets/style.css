@@ -44,8 +44,8 @@ header {
 }
 
 /* Formatting the search form */
-#search-section {
-    
+#search-section h2{
+    margin-left: 5px;
 }
 
 form {
@@ -69,19 +69,22 @@ form {
 #search-btn {
     background-color: rgb(76, 139, 211);
     border-color: rgb(76, 139, 211);
+    border-style:outset;
+    border-radius: 10px;
     color: var(--main-color);
     margin-left: 5px;
-    font-size: 15px;;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* Formatting the section to list past cities searched */
 #history-section {
     width: 95%;
-    background-color: grey;
+    background-color: lightgrey;
     border-width: 2px;
     border-style: solid;
     border-radius: 4px;
-    border-color: grey;
+    border-color: lightgrey;
     height: 40px;
     margin-left: 10px;
     margin-top: 25px;
