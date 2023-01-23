@@ -10,29 +10,41 @@
 
 <body>
 <!-- Title of the web page -->
-    <header class="hero">
+    <header>
         <h1>Weather Dashboard</h1>
     </header>
 
 
-    <main>
-        <div>
-            <div class="card">
-                <h3>Search for a city:</h3>
+    <div class="main">
+        <!-- Left section for search and history display-->
+        <div id="search-history-section">
+            <!-- Left-top section for city search -->
+            <div id="search-section">
+                <h2>Search for a city:</h2>
                 <form>
-                    <input name="username" id="username" type="text" autofocus="true" class="form-input" />
-                    <button type="submit" class="btn">Search</button>
+                    <input name="cityname" id="cityname" type="text" autofocus="true" class="form-input" />
+                    <button type="submit" id="search-btn">Search</button>
                 </form>
             </div>
+            <!-- Left bottom section for history display -->
+            <div id="history-section">
+                <div id="history-cities">
+                </div>    
+            </div>
+        </div>
 
-        <div>
-            
+        <!-- Right section for displaying results for a city -->
+        <div id="results-section">
+            <!-- Right top section for current weather of a city -->
+            <div id="city-weather-section">
+
+            </div>
+            <!-- Right bottom section for 5 day forcast -->
+            <div id="five-day-section">
+                   <div class="each-day-box"></div> 
+            </div>
         </div>
     </div>
-
-    
-      
-</main>
 
 <script src="./assets/script.js"></script>
 </body>
