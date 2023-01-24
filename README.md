@@ -29,6 +29,7 @@ THEN I am again presented with current and future conditions for that city
 ## Mock-up
 The following image shows the application's appearance and functionality:
 https://github.com/SJohnRose/SimpleWeatherDashboard/blob/main/assets/images/Screenshot1.PNG
+https://github.com/SJohnRose/SimpleWeatherDashboard/blob/main/assets/images/Screenshot2.PNG
 
 
 ## How to access the Simple Weather Dashboard app?
