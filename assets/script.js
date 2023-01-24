@@ -11,8 +11,9 @@ function getApi() {
     var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?appid=e55ee97b6b016b9b14fab1caec587add&q='+ cityName + "&units=metric";
     fetch(requestUrl)
         .then((response) => response.json())
-        .then((data) => populateData(data));
-    storeHistoryLocal(cityName);
+        .then((data) => { populateData(data);
+            storeHistoryLocal(cityName);});
+    //storeHistoryLocal(cityName);
 }
 
 // Event listener for the Search button
@@ -49,12 +50,14 @@ function formatDate(oldDate) {
 
 // Store the cities searched in local storage
 function storeHistoryLocal(cityName) {
-    var citiesLocal = localStorage.getItem("City-History");
-    citiesLocal = citiesLocal ? JSON.parse(citiesLocal) : [];
+    var getcitiesLocal = localStorage.getItem("City-History");
+    var citiesLocal = getcitiesLocal ? JSON.parse(getcitiesLocal) : [];
+    //var citiesLocal = JSON.parse(getcitiesLocal);
     if(citiesLocal.length > 10) {
         localStorage.clear();
     }
     if(!citiesLocal.includes(cityName)) {
+        console.log(cityName);
         citiesLocal.push(cityName);
         localStorage.setItem("City-History", JSON.stringify(citiesLocal));
     }
@@ -64,6 +67,7 @@ function storeHistoryLocal(cityName) {
 function showHistoryLocal() {
     var citiesLocal = localStorage.getItem("City-History");
     citiesLocal = citiesLocal ? JSON.parse(citiesLocal) : [];
+    //citiesLocal = JSON.parse(citiesLocal);
     var numCities = citiesLocal.length;
     for(var i=0; i<numCities; i++) {
         let cityEl = document.createElement("button");
@@ -84,7 +88,7 @@ function showHistoryLocal() {
 }    
 
 
-
+// Display weather info when search history is clicked
 historySectionEl.addEventListener('click', function (event) {
     if(event.target.textContent !== "Search") {
         console.log(event.target.textContent);

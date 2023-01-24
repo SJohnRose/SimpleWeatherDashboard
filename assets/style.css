@@ -4,7 +4,6 @@
 
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*color: rgb(3, 3, 41);*/
     
 }
 
@@ -39,8 +38,7 @@ header {
     background-color: whitesmoke;
     width: 25%;
     height: 900px;
-    
-    
+   
 }
 
 /* Formatting the search form */
@@ -96,7 +94,7 @@ form {
     flex-direction: column;
     width: 75%;
     height: 900px;
-    background-color: aliceblue;
+    background-color:white;
 }
 
 /* Formatting to display the current weather in selected city */
@@ -106,6 +104,12 @@ form {
     border-style: solid;
     border-color: black;
     margin: 20px;
+}
+
+#weather-pic {
+    display: flex;
+    flex-direction: row;
+    
 }
 
 /* Formatting for the five day forecast */
