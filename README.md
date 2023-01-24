@@ -35,4 +35,4 @@ https://github.com/SJohnRose/SimpleWeatherDashboard/blob/main/assets/images/Scre
 ## How to access the Simple Weather Dashboard app?
 Please use the following link: https://github.com/SJohnRose/SimpleWeatherDashboard
 
-To access the deployed app: 
+To access the deployed app: https://sjohnrose.github.io/SimpleWeatherDashboard/
