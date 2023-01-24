@@ -114,6 +114,8 @@ form {
     margin: 20px;
     display: flex;
     flex-direction : row;
+    visibility: hidden;
+    color: white;
 }
 
 .each-day-box {
@@ -122,4 +124,5 @@ form {
     background-color: rgb(58,103,133);
     padding: 5px;
     margin: 10px;
+    font-weight: bold;
 }
