@@ -120,4 +120,6 @@ form {
     width:250px;
     height: 350px;
     background-color: rgb(58,103,133);
+    padding: 5px;
+    margin: 10px;
 }
