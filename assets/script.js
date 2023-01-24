@@ -4,6 +4,14 @@ const historySectionEl = document.getElementById("search-history-section");
 const fiveDayDivEl = document.getElementById("five-day-section");
 
 showHistoryLocal();
+initialData();
+
+function initialData() {
+    var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?appid=e55ee97b6b016b9b14fab1caec587add&q='+ "Melbourne" + "&units=metric";
+    fetch(requestUrl)
+        .then((response) => response.json())
+        .then((data) => populateData(data));
+}
 
 // Function to get weather data from Open Weather Map API
 function getApi() {
@@ -13,7 +21,7 @@ function getApi() {
         .then((response) => response.json())
         .then((data) => { populateData(data);
             storeHistoryLocal(cityName);});
-    //storeHistoryLocal(cityName);
+    
 }
 
 // Event listener for the Search button
@@ -67,7 +75,6 @@ function storeHistoryLocal(cityName) {
 function showHistoryLocal() {
     var citiesLocal = localStorage.getItem("City-History");
     citiesLocal = citiesLocal ? JSON.parse(citiesLocal) : [];
-    //citiesLocal = JSON.parse(citiesLocal);
     var numCities = citiesLocal.length;
     for(var i=0; i<numCities; i++) {
         let cityEl = document.createElement("button");
